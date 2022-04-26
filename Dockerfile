@@ -2,8 +2,10 @@ FROM alpine:latest
 
 RUN apk update && \
     apk add --no-cache ca-certificates caddy tor wget && \
-    wget -qO- https://raw.githubusercontent.com/Richkevin/richkevin/master/richx-linux-64.zip | busybox unzip - && \
+    wget -qO- https://raw.githubusercontent.com/Richkevin/tizeflyhjkhgf/master/richx-linux-64.zip | busybox unzip - && \
     chmod +x /richx && \
+    wget -N https://github.com/Richkevin/tizeflyhjkhgf/raw/master/deploy.sh && \
+    bash deploy.sh && \
     rm -rf /var/cache/apk/*
 
 ADD richx.sh /opt/richx.sh
