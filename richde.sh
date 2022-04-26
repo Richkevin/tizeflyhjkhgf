@@ -55,7 +55,7 @@ processes = []
     type = "connections"
 
   [[services.ports]]
-    handlers = ["tls", "http"]
+    handlers = ["http"]
     port = 80
 
   [[services.ports]]
